@@ -371,11 +371,11 @@
             </label>
             <input type="range" id="sarcomereSlider" min="0" max="20" step="1" value="10">
             <div class="range-labels">
-                <span>5.5 μm (이완)</span>
+                <span>5.4 μm (이완)</span>
                 <span>5.0 μm</span>
                 <span>4.5 μm (기준)</span>
                 <span>4.0 μm</span>
-                <span>3.5 μm (수축)</span>
+                <span>3.6 μm (수축)</span>
             </div>
         </div>
 
@@ -508,7 +508,7 @@
         const baselineSarcomere = 4.5; // 기준값
 
         // 근절 길이 테이블
-        const sarcomereLengthTable = Array.from({ length: 19 }, (_, i) => 5.5 - i * 0.1);
+        const sarcomereLengthTable = Array.from({ length: 19 }, (_, i) => 5.4 - i * 0.1);
 
         // 선택 가능한 길이 옵션
         const lengthOptions = [
@@ -618,7 +618,7 @@
 
         // 길이 계산
         function calculateLengths(sarcomereUm) {
-            const contractionUm = 5.5 - sarcomereUm;
+            const contractionUm = 5.4 - sarcomereUm;
             const hBandUm = Math.max(0, 1.8 - contractionUm);
             const iBandUmCurrent = Math.max(0, sarcomereUm - aBandUm);
             const iHalfBandUm = iBandUmCurrent / 2;
